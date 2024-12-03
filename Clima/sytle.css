@@ -1,0 +1,271 @@
+/* Estilos generales para el cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    block-size: 100vh;
+    background-color: #343d4b; /* Color de fondo */
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    font-family: sans-serif; /* Tipografía */
+  }
+  
+  .center {
+    text-align: center; /* Centrar el contenido de texto */
+  }
+  
+  .w3-quarter {
+    inline-size: 24.99999%; /* Ajustar el ancho de las cajas meteorológicas */
+    block-size: 350px; /* Altura */
+  }
+  
+  .caja_meteorologia_iz {
+    position: relative;
+    border-radius: 20px;
+    color: #fff;
+    font: 125% sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .caja_meteorologia_iz::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+  
+  .caja_meteorologia_iz:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+  }
+  
+  .caja_meteorologia_de {
+    background-color: #212730;
+    border-radius: 20px;
+  }
+  
+  h2, p {
+    padding: 0 25px 0;
+  }
+  
+  p {
+    position: relative;
+    inset-block-start: -20px;
+  }
+  
+  /* Estilo para los días de la semana */
+  h1_left {
+    position: absolute;
+    inset-block-end: 25px;
+    inset-inline-start: 16px;
+    font-size: 3vw;
+    line-height: 1.2;
+  }
+  
+  .h3_left {
+    position: absolute;
+    inset-block-end: 0px;
+    inset-inline-start: 16px;
+    font-size: 2vw;
+    line-height: 1.2;
+  }
+  
+  /* Estilo para la tabla de datos */
+  table {
+    position: relative;
+    inset-inline-start: 15px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    inline-size: 85%;
+    text-align: start;
+    max-inline-size: 600px;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  td {
+    text-align: end;
+  }
+  
+  /* Centrado en el contenedor */
+  .clima_Semana {
+    position: relative;
+    inset-inline-start: 0%;
+    border-collapse: separate;
+    border-spacing: 15px;
+    inline-size: 95%;
+    text-align: start;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  table,
+  tr:hover {
+    color: red;
+  }
+  
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    flex: 0 0 calc(20% - 20px);
+    margin: 0 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  span {
+    display: block;
+    margin-block-end: 5px;
+    font: 125% sans-serif;
+    block-size: 35px;
+  }
+  
+  .li_active {
+    background: #fff;
+    color: #222831;
+    border-radius: 10px;
+  }
+  
+  .li_active:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+  }
+  
+  .li_active_temp {
+    display: inline-block;
+    background-color: #222831;
+    color: #ffffff;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+  }
+  
+  .li_active_temp:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+    background: #fff;
+    border-radius: 10px;
+    color: #191a1f;
+  }
+  
+  .span_temperature {
+    font-weight: bold;
+  }
+  
+  /* Acomodo para pantallas medianas */
+  @media only screen and (max-inline-size: 768px) {
+    .center {
+      text-align: start;
+    }
+  
+    .w3-quarter {
+      inline-size: 49.99999%;
+    }
+  }
+  
+  /* Acomodo para pantallas pequeñas */
+  @media only screen and (max-inline-size: 480px) {
+    .w3-quarter {
+      inline-size: 100%;
+    }
+  
+    table {
+      inset-inline-start: 0;
+      inline-size: 100%;
+    }
+  
+    ul {
+      margin-block-end: 15px;
+    }
+  
+    li {
+      inline-size: 100%;
+      max-inline-size: 100%;
+      text-align: center;
+    }
+  
+    .clima_Semana ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+    }
+  
+    .clima_Semana ul li {
+      flex: 0 0 calc(20% - 20px);
+      margin: 0 10px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Ajuste para el contenedor que tiene el botón */
+  .change_Location {
+    color: transparent;
+    font-size: 20px;
+    border-radius: 15px;
+    inline-size: 80%;
+    block-size: 50px;
+    background-image: linear-gradient(to right, rgba(0, 255, 255, 2), rgba(255, 0, 255, 2));
+    margin-block-start: 30px; /* Separar del contenido anterior */
+    margin-block-end: 30px; /* Separar del contenido siguiente */
+    padding: 5px; /* Añadir algo de relleno interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5; /* Aseguramos que esté por encima de otros elementos */
+    margin-inline-start: auto; /* Centrar el contenedor */
+    margin-inline-end: auto; /* Centrar el contenedor */
+  }
+  
+  /* Diseño para el input y el botón dentro del contenedor */
+  #city {
+    inline-size: 70%;
+    block-size: 35px;
+    padding-inline-start: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  #searchButton {
+    inline-size: 25%;
+    block-size: 40px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #searchButton:hover {
+    background-color: #ff80ab; /* Cambio de color al hacer hover */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Efecto al pasar el mouse por el contenedor */
+  .change_Location:hover {
+    background-image: linear-gradient(to left, rgba(0, 255, 255, 2), rgba(255, 0, 255, 2));
+    transform: scale(1);
+  }
+  

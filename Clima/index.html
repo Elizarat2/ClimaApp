@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meteorología Actual</title>
+  <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+  <!-- Primer cuarto de la página -->
+  <div class="w3-quarter"></div>
+
+  <!-- Segundo cuarto de la página -->
+<div class="caja_meteorologia_iz w3-quarter">
+    <div>
+        <h2 id="dayOfWeek">Tuesday</h2> <!-- Día de la semana -->
+        <p id="currentDate">15 Jan 2023</p> <!-- Fecha -->
+        <p id="cityCountry">Paris, FR</p> <!-- Ciudad y país -->
+        
+    
+
+      <!-- Inicialmente oculto -->
+      <h1 class="h1_left" id="temperature" style="display: none;">29°C</h1> <!-- Temperatura actual -->
+      <h3 class="h3_left" id="climate" style="display: none;">Soleado</h3> <!-- Descripción del clima actual -->
+    </div>
+  </div>
+
+  <!-- Tercer cuarto de la página -->
+  <div class="caja_meteorologia_de center w3-quarter">
+    <!-- Tabla de información detallada sobre la meteorología actual -->
+    <table>
+      <tbody>
+        <tr>
+          <th>PRECIPITATION</th>
+          <td id="precipitation">0%</td>
+        </tr>
+        <tr>
+          <th>HUMIDITY</th>
+          <td id="humidity">0%</td>
+        </tr>
+        <tr>
+          <th>WIND</th>
+          <td id="wind">0 km/h</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pronóstico del clima para la semana -->
+    <div class="clima_Semana">
+      <ul class="center">
+        <li class="li_active">
+          <span class="fas fa-sun fa-2x"></span> <!-- Icono -->
+          <span>Tue</span> <!-- Abreviación del día de la semana -->
+          <span class="span_temperature" id="forecast_temp_tue"></span> <!-- Temperatura máxima -->
+        </li>
+        <li class="li_active_temp">
+          <span class="fas fa-cloud-moon fa-2x"></span> <!-- Icono -->
+          <span>Wed</span>
+          <span class="span_temperature" id="forecast_temp_wed"></span>
+        </li>
+        <li class="li_active_temp">
+          <span class="fas fa-cloud-sun-rain fa-2x"></span> <!-- Icono -->
+          <span>Thu</span>
+          <span class="span_temperature" id="forecast_temp_thu"></span>
+        </li>
+        <li class="li_active_temp">
+          <span class="fas fa-cloud-rain fa-2x"></span> <!-- Icono -->
+          <span>Fri</span>
+          <span class="span_temperature" id="forecast_temp_fri"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="change_Location">
+        <input type="text" id="city" placeholder="Ingrese una ciudad" />
+        <button id="searchButton">Cambiar Ubicación</button>
+    </div>
+    <div id="weather-result"></div>
+
+  <!-- Cuarto de la página -->
+  <div class="w3-quarter"></div>
+
+  <!-- Agregar script de JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
